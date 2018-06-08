@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/merchant_side_width"
+    android:layout_marginStart="@dimen/merchant_side_width"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:paddingLeft="@dimen/edge"
+    android:paddingRight="@dimen/edge"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/vIcon"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#333"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/vIcon"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/vDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/vIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vName" />
+
+    <TextView
+        android:id="@+id/vSell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="月售2187"
+        android:textColor="#999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/vIcon"
+        app:layout_constraintTop_toBottomOf="@id/vDesc" />
+
+    <TextView
+        android:id="@+id/vPraise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="赞60"
+        android:textColor="#999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/vSell"
+        app:layout_constraintTop_toBottomOf="@id/vDesc" />
+
+
+    <TextView
+        android:id="@+id/vPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#FB4E44"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/vIcon"
+        app:layout_constraintRight_toLeftOf="@id/vAdd"
+        app:layout_constraintTop_toBottomOf="@id/vSell" />
+
+    <ImageView
+        android:id="@+id/vAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/add"
+        app:layout_constraintBottom_toBottomOf="@id/vPrice"
+        app:layout_constraintLeft_toRightOf="@id/vPrice"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/vCover"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/vCoverShadow"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@drawable/shadow_b_000_shape"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@+id/vCover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/laySimple"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/vCover"
+        app:layout_constraintLeft_toRightOf="@id/vAvatar"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/vMerchant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="鲜粥道（小熊熬粥）"
+            android:textColor="#FFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vMerchantTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="@dimen/edge"
+            android:layout_marginRight="@dimen/edge"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="公告：本店已切换电子发票，如需开票请扫描账..."
+            android:textColor="#C8C8C8"
+            android:textSize="11dp" />
+
+        <LinearLayout
+            android:id="@+id/vMerchantTip2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/tip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="''味道赞''"
+                android:textColor="#F7D180"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/tip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="''服务好''"
+                android:textColor="#F7D180"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/tip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="''包装好''"
+                android:textColor="#F7D180"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/tip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="''分量足''"
+                android:textColor="#F7D180"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.mixiaoxiao.overscroll.OverScrollScrollView
+        android:id="@+id/layScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vCover">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="55dp">
+
+            <TextView
+                android:id="@+id/vMerchantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:alpha="0"
+                android:gravity="center"
+                android:text="鲜粥道（小熊熬粥）"
+                android:textColor="#333"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/layTicket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingLeft="@dimen/edge"
+                android:paddingStart="@dimen/edge"
+                android:scrollbars="none"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.learn.business.TicketView
+                        android:id="@+id/vTicket1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <com.example.learn.business.TicketView
+                        android:id="@+id/vTicket2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/vt1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginStart="@dimen/edge"
+                android:layout_marginTop="10dp"
+                android:background="#FF635B"
+                android:gravity="center"
+                android:text="减"
+                android:textColor="#FFF"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layTicket" />
+
+            <TextView
+                android:id="@+id/vt111"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/edge"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginStart="3dp"
+                android:gravity="center_vertical"
+                android:text="满25减15；满49减20；满79减22"
+                android:textColor="#333"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toRightOf="@+id/vt1"
+                app:layout_constraintRight_toLeftOf="@id/vSwitch"
+                app:layout_constraintTop_toBottomOf="@id/layTicket"
+                app:layout_constraintTop_toTopOf="@+id/vt1" />
+
+            <TextView
+                android:id="@+id/vSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:text="5个活动"
+                android:textColor="#9A9A9A"
+                android:textSize="12dp"
+                app:layout_constraintRight_toLeftOf="@id/vSwitchIcon"
+                app:layout_constraintTop_toTopOf="@id/vt1" />
+
+            <ImageView
+                android:id="@+id/vSwitchIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="@dimen/edge"
+                android:layout_marginRight="@dimen/edge"
+                android:contentDescription="@string/app_name"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:src="@mipmap/menu_switch"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/vt1" />
+
+            <TextView
+                android:id="@+id/vt2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginStart="@dimen/edge"
+                android:layout_marginTop="10dp"
+                android:alpha="0"
+                android:background="#FF7298"
+                android:gravity="center"
+                android:text="领"
+                android:textColor="#FFF"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt111" />
+
+            <TextView
+                android:id="@+id/vt222"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/edge"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginStart="3dp"
+                android:alpha="0"
+                android:gravity="center_vertical"
+                android:text="有机会领取商家代金券"
+                android:textColor="#333"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toRightOf="@+id/vt2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt1"
+                app:layout_constraintTop_toTopOf="@+id/vt2" />
+
+            <TextView
+                android:id="@+id/vt3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginStart="@dimen/edge"
+                android:layout_marginTop="10dp"
+                android:alpha="0"
+                android:background="#FC4343"
+                android:gravity="center"
+                android:text="返"
+                android:textColor="#FFF"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt222" />
+
+            <TextView
+                android:id="@+id/vt333"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/edge"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginStart="3dp"
+                android:alpha="0"
+                android:gravity="center_vertical"
+                android:text="实际支付27元返2元商家代金券"
+                android:textColor="#333"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toRightOf="@+id/vt3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt2"
+                app:layout_constraintTop_toTopOf="@+id/vt3" />
+
+            <TextView
+                android:id="@+id/vt4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginStart="@dimen/edge"
+                android:layout_marginTop="10dp"
+                android:alpha="0"
+                android:background="#FEC51F"
+                android:gravity="center"
+                android:text="首"
+                android:textColor="#FFF"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt333" />
+
+            <TextView
+                android:id="@+id/vt444"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/edge"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginStart="3dp"
+                android:alpha="0"
+                android:gravity="center_vertical"
+                android:text="新用户立减26元，首次使用美团支付最高再减3元！首次使用美团支付最高再减3元！首次使用美团支付最高再减3元！"
+                android:textColor="#333"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toRightOf="@+id/vt4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt3"
+                app:layout_constraintTop_toTopOf="@+id/vt4" />
+
+            <TextView
+                android:id="@+id/vt5"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginStart="@dimen/edge"
+                android:layout_marginTop="10dp"
+                android:alpha="0"
+                android:background="#FFA628"
+                android:gravity="center"
+                android:text="赠"
+                android:textColor="#FFF"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt444" />
+
+            <TextView
+                android:id="@+id/vt555"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/edge"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginStart="3dp"
+                android:alpha="0"
+                android:gravity="center_vertical"
+                android:text="满52元赠送酸辣豇豆"
+                android:textColor="#333"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toRightOf="@+id/vt5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vt4"
+                app:layout_constraintTop_toTopOf="@+id/vt5" />
+
+            <TextView
+                android:id="@+id/vt51"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginTop="25dp"
+                android:text="印象墙"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vt5" />
+
+            <com.zhy.view.flowlayout.FlowLayout
+                android:id="@+id/vt512"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginRight="@dimen/edge"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vt51">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''味道赞''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''包装好''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''配送速度快''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''分量足''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''价格实惠''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''服务好''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''人品好''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@mipmap/tip_2"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="''粥不错''"
+                    android:textColor="#333"
+                    android:textSize="11dp" />
+
+
+            </com.zhy.view.flowlayout.FlowLayout>
+
+            <TextView
+                android:id="@+id/vt52"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginTop="25dp"
+                android:text="配送"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vt512" />
+
+            <TextView
+                android:id="@+id/vt53"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginTop="8dp"
+                android:text="起送￥20 | 配送￥5 | 44分钟"
+                android:textColor="#656565"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vt52" />
+
+
+            <TextView
+                android:id="@+id/vt6"
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginTop="25dp"
+                android:text="公告"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vt53" />
+
+            <TextView
+                android:id="@+id/vt7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edge"
+                android:layout_marginRight="@dimen/edge"
+                android:layout_marginTop="8dp"
+                android:text="滴滴滴，感谢您对备点的支持。点击右上角收藏我们，将免费领取礼品一份噢。欢迎亲们给我们推荐礼品的种类，可评价留言。滴滴滴。"
+                android:textColor="#656565"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@+id/vt6" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </com.mixiaoxiao.overscroll.OverScrollScrollView>
+
+    <ImageView
+        android:id="@+id/vAvatar"
+        android:layout_width="81.5dp"
+        android:layout_height="81.5dp"
+        android:layout_marginLeft="@dimen/edge"
+        android:layout_marginStart="@dimen/edge"
+        android:layout_marginTop="55dp"
+        android:background="@mipmap/avatar_border"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/vHide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shadow_b_fff_shape"
+        android:scaleType="center"
+        android:src="@mipmap/menu_back"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
+

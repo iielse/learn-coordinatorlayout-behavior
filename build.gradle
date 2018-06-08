@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    support_multidex = 'com.android.support:multidex:1.0.2'
+    support_support_v4 = "com.android.support:support-v4:${ANDROID_SUPPORT_VERSION}"
+    support_appcompat_v7 = "com.android.support:appcompat-v7:${ANDROID_SUPPORT_VERSION}"
+    support_recyclerview_v7 = "com.android.support:recyclerview-v7:${ANDROID_SUPPORT_VERSION}"
+    support_design = "com.android.support:design:${ANDROID_SUPPORT_VERSION}"
+    kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${KOTLIN_VERSION}"
+    kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${KOTLIN_VERSION}"
+    kotlin_anko_common = "org.jetbrains.anko:anko-common:${ANKO_VERSION}"
+    glide = 'com.github.bumptech.glide:glide:4.6.1'
+    glide_compiler = 'com.github.bumptech.glide:compiler:4.6.1'
+    glide_transformations = 'jp.wasabeef:glide-transformations:3.0.1'
+    list_pull_to_refresh = 'in.srain.cube:ultra-ptr:1.0.11'
+    list_adapter = 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    eventbus = 'org.greenrobot:eventbus:3.1.1'
+}

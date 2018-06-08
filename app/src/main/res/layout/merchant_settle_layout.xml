@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/vBg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#404040"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/vSubmit"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:background="@drawable/settle_submit_shape"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="去结算"
+        android:textColor="#333"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/vBg"
+        app:layout_constraintRight_toRightOf="@id/vBg"
+        app:layout_constraintTop_toTopOf="@id/vBg" />
+
+
+    <TextView
+        android:id="@+id/vPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:text="￥33"
+        android:textColor="#FFF"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@id/vTip"
+        app:layout_constraintLeft_toRightOf="@id/vIcon"
+        app:layout_constraintTop_toTopOf="@id/vBg"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/vTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp"
+        android:text="另需配送费￥5"
+        android:textColor="#999"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/vIcon"
+        app:layout_constraintTop_toBottomOf="@id/vPrice" />
+
+    <TextView
+        android:id="@+id/vDiscounts"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:background="#FFF1CF"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingLeft="@dimen/edge"
+        android:paddingRight="@dimen/edge"
+        android:singleLine="true"
+        android:text="新用户立减17.0元(在线支付专享)"
+        android:textColor="#333"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@id/vBg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/vIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/edge"
+        android:layout_marginStart="@dimen/edge"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/settle_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/edge"
+        android:layout_marginRight="@dimen/edge"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:src="@mipmap/bhw"
+        app:layout_constraintBottom_toTopOf="@+id/vDiscounts"
+        app:layout_constraintLeft_toLeftOf="parent" />
+</merge>

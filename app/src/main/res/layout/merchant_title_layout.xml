@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/vSearchBorder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginTop="9dp"
+        android:alpha="0"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/merchant_search_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/vBack"
+        app:layout_constraintRight_toLeftOf="@id/vCollection"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vSearchHint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="28dp"
+        android:alpha="0"
+        android:gravity="start|center_vertical"
+        android:text="请输入商品名称"
+        android:textColor="#989898"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/vSearchBorder"
+        app:layout_constraintLeft_toLeftOf="@id/vSearchBorder"
+        app:layout_constraintRight_toRightOf="@id/vSearchBorder"
+        app:layout_constraintTop_toTopOf="@id/vSearchBorder" />
+
+
+    <ImageView
+        android:id="@+id/vBack"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/title_height"
+        android:contentDescription="@string/app_name"
+        android:scaleType="center"
+        android:src="@mipmap/back_white" />
+
+    <ImageView
+        android:id="@+id/vMenu"
+        android:layout_width="43.5dp"
+        android:layout_height="@dimen/title_height"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_menu"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/vTogether"
+        android:layout_width="43.5dp"
+        android:layout_height="@dimen/title_height"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_together"
+        app:layout_constraintRight_toLeftOf="@+id/vMenu" />
+
+    <ImageView
+        android:id="@+id/vCollection"
+        android:layout_width="43.5dp"
+        android:layout_height="@dimen/title_height"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_collection"
+        app:layout_constraintRight_toLeftOf="@+id/vTogether" />
+
+    <ImageView
+        android:id="@+id/vSearch"
+        android:layout_width="43.5dp"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_search"
+        app:layout_constraintRight_toLeftOf="@+id/vCollection" />
+
+
+</android.support.constraint.ConstraintLayout>

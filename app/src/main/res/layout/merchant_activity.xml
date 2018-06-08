@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.example.learn.business.MerchantContentLayout
+        android:id="@+id/layContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.learn.business.MerchantPageLayout
+        android:id="@+id/layPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/merchant_offset"
+        app:layout_behavior="@string/view_behavior_merchant_page" />
+
+    <com.example.learn.business.MerchantTitleLayout
+        android:id="@+id/layTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.example.learn.business.MerchantSettleLayout
+        android:id="@+id/laySettle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+</android.support.design.widget.CoordinatorLayout>

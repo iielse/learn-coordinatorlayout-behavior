@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#FFD038</color>-->
+    <!--<color name="colorPrimaryDark">#EEC027</color>-->
+    <!--<color name="colorAccent">#EEC027</color>-->
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#000</color>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <item name="vs1" type="id" />
+    <item name="vs2" type="id" />
+
+    <dimen name="edge">10dp</dimen>
+    <dimen name="normal">14.5dp</dimen>
+    <dimen name="title_height">48dp</dimen>
+    <dimen name="merchant_tab_height">38dp</dimen>
+    <color name="divide_line">#E5E5E5</color>
+
+    <dimen name="merchant_offset">202dp</dimen>
+    <dimen name="merchant_side_width">80dp</dimen>
+
+
+</resources>
